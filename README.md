@@ -58,5 +58,8 @@ Edit the `firewall_config.json` file to define your custom rules:
   ``` bash
   Blocked: IP <SRC> -> <DST> | Reason: <Reason for block>
   ```
+
+## License
+This project is licensed under the MIT License. Feel free to use and modify for educational purposes.
   
      
