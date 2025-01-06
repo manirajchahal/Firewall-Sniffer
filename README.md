@@ -26,3 +26,5 @@ The **Firewall Sniffer** is a Python-based firewall that dynamically inspects an
 - Install the dependencies using:
   ```bash
   pip install scapy
+
+## Configuration
