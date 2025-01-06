@@ -26,5 +26,37 @@ The **Firewall Sniffer** is a Python-based firewall that dynamically inspects an
 - Install the dependencies using:
   ```bash
   pip install scapy
-
+  ```
 ## Configuration
+Edit the `firewall_config.json` file to define your custom rules:
+```bash
+{
+    "whitelisted_ips": ["127.0.0.1", "192.168.1.50"],
+    "blocked_ips": ["192.168.1.100"],
+    "blocked_ports": [80, 443],
+    "blocked_protocols": ["ICMP"]
+}
+```
+## Usage
+1. Run the firewall:
+   ```bash
+   python firewall_sniffer.py
+2. Dynamic Rules Update
+   - Modify `firewall_config.json` to add or remove rules while the firewall is running.
+3. Generate Traffic Using:
+   - `ping`
+   - `curl`
+   - `hping3`
+
+## Testing
+- Whitelist Test: Verify that traffic from IPs in whitelisted_ips bypasses all filters.
+- Rate Limit Test: Generate excess traffic from a single IP to trigger the rate-limiting mechanism.
+- Ports and Protocols Test: Confirm that blocked protocols and ports are handled correctly.
+
+## Logs
+- Blocked packets are recorded in firewall_logs.txt in the following format:
+  ``` bash
+  Blocked: IP <SRC> -> <DST> | Reason: <Reason for block>
+  ```
+  
+     
