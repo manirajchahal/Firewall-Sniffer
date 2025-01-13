@@ -38,12 +38,13 @@ Edit the `firewall_config.json` file to define your custom rules:
 }
 ```
 ## Usage
-1. Run the firewall:
+1. Use CLI of choice to access directory where you have stored the firewall_sniffer.py folder (attached above).
+2. Run the firewall:
    ```bash
    python firewall_sniffer.py
-2. Dynamic Rules Update
+3. Dynamic Rules Update
    - Modify `firewall_config.json` to add or remove rules while the firewall is running.
-3. Generate Traffic Using:
+4. Generate Traffic Using:
    - `ping`
    - `curl`
    - `hping3`
